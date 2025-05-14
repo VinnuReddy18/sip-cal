@@ -16,4 +16,5 @@ app.post("/sip-goal", (req, res) => {
   res.json({ monthly_sip: sip });
 });
 
-app.listen(3000, () => console.log("SIP API running"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`SIP API running on port ${PORT}`));
